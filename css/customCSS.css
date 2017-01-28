@@ -1,0 +1,155 @@
+/* Due to the navbar being fixed-top we need to add padding to the body */
+/*
+body {
+	padding-top: 70px; 
+}
+*/
+html {
+  position: relative;
+  min-height: 100%;
+  background-color: #f5f5f5;
+
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background-color: #f5f5f5;
+}
+
+.header-img-top-nav img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+.header-title{
+	padding-top: 15vh;
+	top: 20%;
+	margin-bottom: 30px;
+	text-align: center;
+	font-size: 50px;
+}
+
+.header-img-logo{
+	top: 5%;
+}
+.header-img-logo img {
+	display: block;
+    margin: auto;
+    max-width: 100%;
+    top: 20;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+.header-motto{
+	margin-top: 25px;
+	text-align: center;
+	font-size: 15px;
+	font-style: italic;
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.container {
+  padding: 0 15px;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.main-menu-options-left{
+	text-align: right;
+    border: 1px #000 solid;
+    padding: 50px 10px 50px 50px;
+}
+
+.main-menu-options-right{
+	text-align: left;
+    border: 1px #000 solid;
+    padding: 50px 50px 50px 10px;
+}
+
+.main-menu-options-right ul{
+	padding: 0px;
+}
+
+.main-menu ul li{
+	padding-top: 15px;
+	margin-bottom: 15px;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+.main-menu ul li a{
+	text-decoration: none;
+}
+
+.main-menu-logo{
+    border: 1px #000 solid;
+}
+
+/** Gallery **/
+.gallery-dialog-body{
+	padding: 0;
+}
+
+.gallery-dialog-close{
+	position: absolute;
+	right: -14px;
+	top: -11px;
+	font-size: 30px;
+	color: #fff;
+	text-shadow: 1px 1px 18px #000;
+}
+
+a.gallery-dialog-controls.next {
+    right: -10px;
+}
+a.gallery-dialog-controls.previous {
+    left: -10px;
+}
+a.gallery-dialog-controls, a.gallery-dialog-controls:visited, a.gallery-dialog-controls:active {
+    position: absolute;
+    top: 44%;
+    font-size: 26px;
+    color: #fff;
+    text-shadow: 1px 1px 18px #000;
+}
+
+.galery-dialog-img-caption{
+    background-color: #000;
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    font-size: 24px;
+}
+
+.social-item{
+	margin:	auto;
+}
+
+.social-text{
+	text-align: right;
+}
+
+.social-icons-top{
+	text-align: center;
+}
+
+.contact-bar{
+ margin-bottom: 20px;
+}

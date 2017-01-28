@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Gallery | My modular web </title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- CSS and JS generic loader -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- Custom css -->
+  <link rel="stylesheet" href="css/customCSS.css">
+
+</head>
+<body>
+  <!-- Header image on top (I dislike it, so commented out)
+  <div class="header-img-top-nav">
+    <img src="imgs/header_img.png">
+  </div>
+  -->
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-top" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Business name</a>
+        <div class="social-items-top-collapsed visible-xs">
+          <a href="contact.html" class="fa fa-facebook-square fa-4x"></a>
+          <a href="contact.html" class="fa fa-twitter-square  fa-4x"></a>
+        </div>   
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="main-navbar-top">
+        <ul class="nav navbar-nav">
+          <li><a href="aboutus.html">About us <span class="sr-only">(current)</span></a></li>
+          <li><a href="content_page_01.html">Content</a></li>
+          <!--
+          <li class="dropdown">
+            <a href="courses.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="course1.html">Course 1</a></li>
+              <li><a href="course2.html">Course 2</a></li>
+              <li><a href="course3.html">Course 3</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="roster.html">Roster</a></li>
+            </ul>
+          </li>
+          -->
+          <li class="active"><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>  
+        <ul class="nav navbar-nav navbar-right hidden-xs">
+          <li><a href="contact.html" class="fa fa-facebook-square fa-4x"></a></li>
+          <li><a href="contact.html" class="fa fa-twitter-square  fa-4x"></a></li>
+        </ul>                
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+    
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">Thumbnail Gallery</h1>
+      </div>
+      <div class="col-lg-4 col-md-4 col-xs-6 thumb" data-toggle="modal" data-target="#gallery-modal">
+        <a class="thumbnail" href="#gallery-dialog-carousel"  data-slide-to="0">
+            <img class="img-responsive" src="imgs/Jellyfish.jpg" alt="">
+        </a>
+      </div>      
+      <div class="col-lg-4 col-md-4 col-xs-6 thumb" data-toggle="modal" data-target="#gallery-modal">
+        <a class="thumbnail" href="#gallery-dialog-carousel" data-slide-to="1">
+          <img class="img-responsive" src="imgs/Koala.jpg" alt="">
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-xs-6 thumb" data-toggle="modal" data-target="#gallery-modal">
+        <a class="thumbnail" href="#gallery-dialog-carousel" data-slide-to="2">
+          <img class="img-responsive" src="imgs/Lighthouse.jpg" alt="">
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-xs-6 thumb" data-toggle="modal" data-target="#gallery-modal">
+        <a class="thumbnail" href="#gallery-dialog-carousel" data-slide-to="3">
+          <img class="img-responsive" src="imgs/Penguins.jpg" alt="">
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-xs-6 thumb" data-toggle="modal" data-target="#gallery-modal">
+        <a class="thumbnail" href="#gallery-dialog-carousel" data-slide-to="4">
+          <img class="img-responsive" src="imgs/Tulips.jpg" alt="">
+        </a>
+      </div>
+      <!-- modals -->
+      <div id="gallery-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg gallery-dialog">
+          <!--<a class="close" href="#">×</a>-->
+          <div class="modal-content">
+            <div class="modal-body gallery-dialog-body">
+              <div id="gallery-dialog-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img src="imgs/Jellyfish.jpg" alt="Jellyfish">
+                    <div class="galery-dialog-img-caption">
+                      Looks cool, but not cool
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="imgs/Koala.jpg" alt="Koala">
+                    <div class="galery-dialog-img-caption">
+                      It´s cute, not its claws.
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="imgs/Lighthouse.jpg" alt="Lighthouse">
+                    <div class="galery-dialog-img-caption">
+                      Lights the way. Duh.
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="imgs/Penguins.jpg" alt="Penguins">
+                    <div class="galery-dialog-img-caption">
+                      Tailor-made suits.
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="imgs/Tulips.jpg" alt="Tulips">
+                    <div class="galery-dialog-img-caption">
+                      Expensive flowers.
+                    </div>
+                  </div>
+                </div>
+                <a href="#" role="button" data-dismiss="modal">
+                  <span class="glyphicon glyphicon-remove-circle gallery-dialog-close"></span>
+                </a>
+                <!-- Left and right controls -->
+                <a class="gallery-dialog-controls previous" href="#gallery-dialog-carousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="gallery-dialog-controls next" href="#gallery-dialog-carousel" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">Copyright 2017 - Name website - etc.</p>
+    </div>
+  </footer>
+</body>
+</html>
