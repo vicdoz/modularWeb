@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
 
-  <title>Team | My modular web </title>
+  <title>My modular web </title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,9 +12,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  
+
   <!-- Custom css -->
-  <link rel="stylesheet" href="css/customCSS.css">
+   <link rel="stylesheet" href="{% static 'css/customCSS.css' %}">
 
 </head>
 <body>
@@ -23,7 +23,7 @@
     <img src="imgs/header_img.png">
   </div>
   -->
-  <nav class="navbar navbar-inverse navbar-static-top">
+  <nav class="navbar navbar-inverse navbar-static-top visible-xs visible-sm">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -37,13 +37,13 @@
         <div class="social-items-top-collapsed visible-xs">
           <a href="contact.html" class="fa fa-facebook-square fa-4x"></a>
           <a href="contact.html" class="fa fa-twitter-square  fa-4x"></a>
-        </div>     
+        </div>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="main-navbar-top">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="aboutus.html">About us <span class="sr-only">(current)</span></a></li>
-          <li><a href="content_page_01.html">Content</a></li>
+          <li><a href="team.html">Team <span class="sr-only">(current)</span></a></li>
+          <li><a href="courses.html">Courses</a></li>
           <!--
           <li class="dropdown">
             <a href="courses.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses <span class="caret"></span></a>
@@ -62,18 +62,55 @@
         <ul class="nav navbar-nav navbar-right hidden-xs">
           <li><a href="contact.html" class="fa fa-facebook-square fa-4x"></a></li>
           <li><a href="contact.html" class="fa fa-twitter-square  fa-4x"></a></li>
-        </ul>                  
+        </ul>     
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-    
   <div class="container">
-    <h3>About us</h3>
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur ac erat quis consectetur. Aenean bibendum urna dui, eget sodales velit porta eleifend. Praesent vel nisi varius, venenatis tellus nec, congue mauris. Vestibulum non neque sit amet orci pharetra bibendum vel eget est. Morbi sed nibh vel dolor pretium iaculis. Praesent a risus vel leo ullamcorper egestas vitae quis purus. Proin ut est eget justo gravida suscipit dignissim nec ante. In dignissim dui in dui malesuada dapibus. Phasellus tempor magna purus, eget commodo enim fringilla at.
-
-    Mauris non aliquam diam, eu porttitor orci. In hac habitasse platea dictumst. Proin non eros pellentesque velit tristique lobortis. Suspendisse sodales magna nec nibh hendrerit, id pellentesque mi efficitur. Praesent libero libero, euismod eu magna quis, tincidunt dictum velit. Praesent tincidunt, felis varius dignissim tempus, tellus quam viverra ex, ut egestas velit enim et nulla. Mauris rutrum semper ligula quis condimentum.
-
-    Proin porttitor ac purus sed malesuada. Suspendisse eu risus sed nisl lacinia rhoncus. Etiam hendrerit ipsum erat, feugiat efficitur nulla sagittis a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent et lobortis eros, vitae laoreet ex. Duis pharetra ut arcu eu pulvinar. Quisque placerat felis eget sapien euismod ornare. Nulla ullamcorper erat non eleifend rutrum. Nulla lacinia dapibus lectus vel cursus. Vestibulum id leo arcu. Ut id laoreet risus. Integer non metus et eros sollicitudin scelerisque vel eu ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed eget felis consectetur, dictum elit vitae, placerat lorem. Sed mollis ullamcorper imperdiet.</p>
+    <div class="header-title row hidden-xs hidden-sm">
+      Business Name
+    </div>
+    <div class="header-img-logo row">
+      <div class="col-md-4 main-menu main-menu-options-left hidden-xs hidden-sm">
+          <ul>
+            <li>
+              <a href="aboutus.html">
+                <span class="fa fa-2x">About us </span>
+                <span class="fa fa-users fa-2x"></span>
+              </a>
+            </li>
+            <li>
+              <a href="content_page_01.html">
+                <span class="fa fa-2x">Content </span>
+                <span class="fa fa-pencil fa-2x"></span>
+              </a>
+            </li>
+            <li>
+              <a href="gallery.html">
+                <span class="fa fa-2x">Gallery </span>
+                <span class="fa fa-camera fa-2x"></span>
+              </a>
+            </li>
+          </ul>
+      </div>
+      <div class="col-md-4">
+        <div class="main-menu-logo">
+          <img src="{% static 'imgs/main_logo_img.png' %}">
+        </div>
+      </div>
+      <div class="col-md-4 main-menu main-menu-options-right hidden-xs hidden-sm">
+          <ul>
+            <li><a href="contact.html"><span class="fa fa-phone fa-2x"> Contact</span></a></li>
+            <li>
+              <a href="contact.html" class="fa fa-facebook-square fa-4x"></a>
+              <a href="contact.html" class="fa fa-twitter-square  fa-4x"></a>
+            </li>
+          </ul>
+      </div>
+    </div>
+    <div class="header-motto row">
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur ac erat quis consectetur.</p>
+    </div>
   </div>
   <footer class="footer">
     <div class="container">
