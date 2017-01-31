@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
 
@@ -14,8 +14,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
   <!-- Custom css -->
-  <link rel="stylesheet" href="css/customCSS.css">
-
+   <link rel="stylesheet" href="{% static 'css/customCSS.css' %}">
 </head>
 <body>
   <!-- Header image on top (I dislike it, so commented out)
@@ -74,27 +73,29 @@
       </div>
       <div class="col-lg-4 col-md-4 col-xs-6 thumb" data-toggle="modal" data-target="#gallery-modal">
         <a class="thumbnail" href="#gallery-dialog-carousel"  data-slide-to="0">
-            <img class="img-responsive" src="imgs/Jellyfish.jpg" alt="">
+            <img class="img-responsive" src="{% static 'imgs/Jellyfish.jpg' %}">
+
         </a>
       </div>      
       <div class="col-lg-4 col-md-4 col-xs-6 thumb" data-toggle="modal" data-target="#gallery-modal">
         <a class="thumbnail" href="#gallery-dialog-carousel" data-slide-to="1">
-          <img class="img-responsive" src="imgs/Koala.jpg" alt="">
+          <img class="img-responsive" src="{% static 'imgs/Koala.jpg' %}">
         </a>
       </div>
       <div class="col-lg-4 col-md-4 col-xs-6 thumb" data-toggle="modal" data-target="#gallery-modal">
         <a class="thumbnail" href="#gallery-dialog-carousel" data-slide-to="2">
-          <img class="img-responsive" src="imgs/Lighthouse.jpg" alt="">
+          <img class="img-responsive" src="{% static 'imgs/Lighthouse.jpg' %}">
         </a>
       </div>
       <div class="col-lg-4 col-md-4 col-xs-6 thumb" data-toggle="modal" data-target="#gallery-modal">
         <a class="thumbnail" href="#gallery-dialog-carousel" data-slide-to="3">
-          <img class="img-responsive" src="imgs/Penguins.jpg" alt="">
+          <img class="img-responsive" src="{% static 'imgs/Penguins.jpg' %}">
         </a>
       </div>
       <div class="col-lg-4 col-md-4 col-xs-6 thumb" data-toggle="modal" data-target="#gallery-modal">
         <a class="thumbnail" href="#gallery-dialog-carousel" data-slide-to="4">
-          <img class="img-responsive" src="imgs/Tulips.jpg" alt="">
+           <img class="img-responsive" src="{% static 'imgs/Tulips.jpg' %}">
+
         </a>
       </div>
       <!-- modals -->
@@ -107,31 +108,31 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                   <div class="item active">
-                    <img src="imgs/Jellyfish.jpg" alt="Jellyfish">
+                    <img src="{% static 'imgs/Jellyfish.jpg' %}" alt="Jellyfish">
                     <div class="galery-dialog-img-caption">
                       Looks cool, but not cool
                     </div>
                   </div>
                   <div class="item">
-                    <img src="imgs/Koala.jpg" alt="Koala">
+                    <img src="{% static 'imgs/Koala.jpg' %}" alt="Koala">
                     <div class="galery-dialog-img-caption">
                       It´s cute, not its claws.
                     </div>
                   </div>
                   <div class="item">
-                    <img src="imgs/Lighthouse.jpg" alt="Lighthouse">
+                    <img src="{% static 'imgs/Lighthouse.jpg' %}" alt="Lighthouse">
                     <div class="galery-dialog-img-caption">
                       Lights the way. Duh.
                     </div>
                   </div>
                   <div class="item">
-                    <img src="imgs/Penguins.jpg" alt="Penguins">
+                    <img src="{% static 'imgs/Penguins.jpg' %}" alt="Penguins">
                     <div class="galery-dialog-img-caption">
                       Tailor-made suits.
                     </div>
                   </div>
                   <div class="item">
-                    <img src="imgs/Tulips.jpg" alt="Tulips">
+                    <img src="{% static 'imgs/Tulips.jpg' %}" alt="Tulips">
                     <div class="galery-dialog-img-caption">
                       Expensive flowers.
                     </div>
