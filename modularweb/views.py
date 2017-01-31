@@ -16,3 +16,6 @@ def gallery(request):
 
 def content_page_01(request):
     return render(request, 'content_page_01.html', {})
+
+def test(request):
+    return render(request, 'base.html', {})

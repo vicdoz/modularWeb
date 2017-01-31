@@ -1,22 +1,6 @@
 {% load staticfiles %}
 <html lang="en">
-<head>
-
-  <title>Contact | My modular web </title>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- CSS and JS generic loader -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-  <!-- Custom css -->
-   <link rel="stylesheet" href="{% static 'css/customCSS.css' %}">
-  <!-- functions to load stuff -->
-</head>
+{% include "header.html" %}
 <body>
   <!-- Header image on top (I dislike it, so commented out)
   <div class="header-img-top-nav">
@@ -33,23 +17,23 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Business name</a>
+        <a class="navbar-brand" href="{% url 'home' %}">Business name</a>
         <div class="social-items-top-collapsed visible-xs">
-          <a href="contact.html" class="fa fa-facebook-square fa-4x"></a>
-          <a href="contact.html" class="fa fa-twitter-square  fa-4x"></a>
+          <a href="{% url 'contact' %}" class="fa fa-facebook-square fa-4x"></a>
+          <a href="{% url 'contact' %}" class="fa fa-twitter-square  fa-4x"></a>
         </div>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="main-navbar-top">
         <ul class="nav navbar-nav">
-          <li><a href="aboutus.html">About us <span class="sr-only">(current)</span></a></li>
-          <li><a href="content_page_01.html">Content</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li class="active"><a href="contact.html">Contact</a></li>
+          <li><a href="{% url 'about' %}">About us <span class="sr-only">(current)</span></a></li>
+          <li><a href="{% url 'content_page' %}">Content</a></li>
+          <li><a href="{% url 'gallery' %}">Gallery</a></li>
+          <li class="active"><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
          <ul class="nav navbar-nav navbar-right hidden-xs">
-            <li><a href="contact.html" class="fa fa-facebook-square fa-4x"></a></li>
-            <li><a href="contact.html" class="fa fa-twitter-square  fa-4x"></a></li>
+            <li><a href="{% url 'contact' %}" class="fa fa-facebook-square fa-4x"></a></li>
+            <li><a href="{% url 'contact' %}" class="fa fa-twitter-square  fa-4x"></a></li>
           </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -89,10 +73,6 @@
       </div><!-- /map-outer -->
     </div>
   </div>
-  <footer class="footer">
-    <div class="container">
-      <p class="text-muted">Copyright 2017 - Name website - etc.</p>
-    </div>
-  </footer>
+  {% include "footer.html" %}
 </body>
 </html>
