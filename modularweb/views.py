@@ -5,17 +5,18 @@ def index(request):
     return render(request, 'index.html', {})
 
 def contact(request):
-    return render(request, 'contact.html', {})
+    variables = {'pageName': 'Contact'}
+    return render(request, 'contact.html', variables)
 
 def about(request):
-    return render(request, 'aboutus.html', {})
+    variables = {'pageName': 'About us'}
+    return render(request, 'aboutus.html', variables)
 
 
 def gallery(request):
-    return render(request, 'gallery.html', {})
+    variables = {'pageName': 'Gallery'}
+    return render(request, 'gallery.html', variables)
 
 def content_page_01(request):
-    return render(request, 'content_page_01.html', {})
-
-def test(request):
-    return render(request, 'base.html', {})
+    variables = {'pageName': 'Content'}
+    return render(request, 'content_page_01.html', variables)
